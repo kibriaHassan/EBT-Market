@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-500 active:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-gray-950;
+}
+
+.btn-secondary {
+  @apply bg-gray-800 text-gray-100 border border-gray-700 hover:bg-gray-700 focus:ring-gray-600 focus:ring-offset-gray-950;
+}
+
+.btn-outline {
+  @apply border border-indigo-500 text-indigo-400 hover:bg-indigo-600 hover:text-white focus:ring-indigo-500 focus:ring-offset-gray-950;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-500 focus:ring-red-500 focus:ring-offset-gray-950;
+}
+button{
+  cursor: pointer;
+}
