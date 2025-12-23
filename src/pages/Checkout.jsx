@@ -77,7 +77,6 @@ const Checkout = () => {
                             Your Order
                         </h2>
 
-                        {/* Products */}
                         <div className="space-y-4 mb-6">
                             {checkoutItems.map((item) => (
                                 <div

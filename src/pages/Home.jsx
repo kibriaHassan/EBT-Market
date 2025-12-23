@@ -44,7 +44,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* ================= FEATURES ================= */}
       <section className="container py-16 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
         {[
