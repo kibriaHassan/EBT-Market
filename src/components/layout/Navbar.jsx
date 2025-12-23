@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
+    const cartItems = useSelector(state => state.cart)
   return (
     <header className="bg-gray-900 border-b border-gray-800">
       <div className="container h-16 flex items-center justify-between">
@@ -52,9 +54,9 @@ const Navbar = () => {
           >
             Cart
             {/* Cart Badge (static) */}
-            <span className="absolute -top-2 -right-3 bg-indigo-600 text-white text-xs px-1.5 rounded-full">
-              2
-            </span>
+            {cartItems.length>0&&<span className="absolute -top-2 -right-3 bg-indigo-600 text-white text-xs px-1.5 rounded-full">
+              {cartItems.length}
+            </span>}
           </NavLink>
 
           <Link to="/profile" className="btn btn-primary btn-sm">

@@ -1,26 +1,19 @@
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router";
 
 const Checkout = () => {
-    // static checkout products
-    const checkoutItems = [
-        {
-            id: "p1",
-            title: "Wireless Headphone",
-            price: 3500,
-            quantity: 1,
-        },
-        {
-            id: "p2",
-            title: "Smart Watch",
-            price: 2800,
-            quantity: 2,
-        },
-    ];
-
-    const subtotal = 3500 + 2800 * 2;
-    const delivery = 100;
-    const total = subtotal + delivery;
-
+    const delivery = 10;
+    const [subTotal, setSubTotal] = useState(0)
+    const checkoutItems = useSelector(state => state.cart)
+    let total = 0;
+    useEffect(() => {
+        checkoutItems.map(item => {
+            total += item.price * item.quantity
+        })
+        setSubTotal(total)
+    })
+    console.log(subTotal)
     return (
         <div className="bg-gray-950 text-gray-100">
             <div className="container py-12">
@@ -100,7 +93,7 @@ const Checkout = () => {
                                         </p>
                                     </div>
                                     <p className="text-gray-300">
-                                        ৳ {item.price * item.quantity}
+                                        $ {(item.price * item.quantity).toFixed(2)}
                                     </p>
                                 </div>
                             ))}
@@ -110,15 +103,15 @@ const Checkout = () => {
                         <div className="space-y-3 text-sm text-gray-400 border-t border-gray-800 pt-4">
                             <div className="flex justify-between">
                                 <span>Subtotal</span>
-                                <span>৳ {subtotal}</span>
+                                <span>$ {subTotal.toFixed(2)}</span>
                             </div>
                             <div className="flex justify-between">
                                 <span>Delivery</span>
-                                <span>৳ {delivery}</span>
+                                <span>$ {delivery}</span>
                             </div>
                             <div className="flex justify-between text-gray-100 font-medium">
                                 <span>Total</span>
-                                <span>৳ {total}</span>
+                                <span>$ {(subTotal+delivery).toFixed(2)}</span>
                             </div>
                         </div>
 
