@@ -9,7 +9,6 @@ const NotFound = () => {
         <h1 className="text-7xl font-extrabold text-indigo-500 mb-4">
           404
         </h1>
-
         {/* Message */}
         <h2 className="text-2xl font-bold mb-3">
           Page Not Found

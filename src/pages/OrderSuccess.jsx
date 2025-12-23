@@ -43,7 +43,6 @@ const OrderSuccess = () => {
             <span className="text-gray-200">Estimated Delivery:</span> 3–5 working days
           </p>
         </div>
-
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/shop" className="btn btn-primary btn-lg">
