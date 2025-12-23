@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 border-t border-gray-800 text-gray-400">
       <div className="container py-12 grid gap-10 md:grid-cols-4">
-
         {/* Brand */}
         <div>
           <h2 className="text-xl font-bold text-gray-100">
@@ -14,7 +13,6 @@ const Footer = () => {
             Smart shopping experience with modern design and reliable service.
           </p>
         </div>
-
         {/* Quick Links */}
         <div>
           <h3 className="text-gray-100 font-semibold mb-4">
