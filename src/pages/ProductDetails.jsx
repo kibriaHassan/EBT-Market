@@ -38,7 +38,6 @@ const ProductDetails = () => {
           <div className="h-80 w-full bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 mb-4">
             <img className="w-full h-full object-cover" src={productPhoto ? productPhoto : thumbnail} alt={title} />
           </div>
-
           {/* Thumbnails */}
           <div className="flex gap-3">
             {images?.map((item) => (
@@ -88,11 +87,8 @@ const ProductDetails = () => {
           </div>
         </div>
         </>
-        
+      
         }
-
-        
-
       </div>
     </div>
   );
