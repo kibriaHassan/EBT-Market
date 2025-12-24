@@ -51,7 +51,6 @@ const OrderSuccess = () => {
             Back to Home
           </Link>
         </div>
-
       </div>
     </div>
   );

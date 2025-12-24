@@ -26,7 +26,6 @@ const NotFound = () => {
             Go to Shop
           </Link>
         </div>
-
       </div>
     </div>
   );

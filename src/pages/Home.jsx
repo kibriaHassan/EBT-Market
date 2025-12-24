@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import ProductCard from "../components/product/ProductCard";
 import { useEffect, useState } from "react";
-
 const Home = () => {
   const [products, setProducts] = useState([])
   useEffect(()=>{
@@ -25,7 +24,6 @@ const Home = () => {
               Everything you need, one place.
               Smart shopping experience with modern design.
             </p>
-
             <div className="mt-6 flex gap-4">
               <Link to="/shop" className="btn btn-primary btn-lg">
                 Shop Now
