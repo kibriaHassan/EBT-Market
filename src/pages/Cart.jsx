@@ -16,7 +16,6 @@ const Cart = () => {
   return (
     <div className="bg-gray-950 text-gray-100">
       <div className="container py-12">
-
         {/* ================= HEADER ================= */}
         <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
 

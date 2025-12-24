@@ -53,10 +53,8 @@ const Shop = () => {
   const limit = 8;
   const pages = [...Array(Math.ceil(products?.length / limit))]
   const handlePagination = (i) => {
-    // console.log(i)
     setSkip(limit * i)
   }
-  // search
   const handleSearch = (e) => {
     const value = e.target.value.trim().toLowerCase();
     setSearch(value)
